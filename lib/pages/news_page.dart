@@ -10,10 +10,9 @@ class NewsPage extends StatelessWidget {
   const NewsPage({super.key});
 
   Future<List<Article>> _getNews() async {
-    // final String url =
-    //     "${Constants.baseUrl}${Constants.topHeadlines}?apiKey=${Constants.apiKey}${Constants.country}";
-    const String url =
-        'https://newsapi.org/v2/top-headlines?apiKey=20cae1d91774439aa1cebb3900e77f5f&country=in';
+     final String url =
+         "${Constants.baseUrl}${Constants.topHeadlines}?apiKey=${Constants.apiKey}${Constants.country}";
+    //const String url =
     final parseUrl = Uri.parse(url);
     final response = await http.get(parseUrl);
 
